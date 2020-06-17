@@ -9,7 +9,34 @@ export function activate(context: vscode.ExtensionContext) {
         //     console.log(state.isSymbolicLink);
         // });
 
-        fs.exists(uri.fsPath, exists => console.log(exists));
+        // fs.exists(uri.fsPath, exists => console.log(exists));
+
+        // Is it file?
+        // fs.readdir(uri.fsPath, (error, children) => {
+        //     console.log(error);
+        //     console.log(children);
+        // });
+
+        // Is it file and is it empty?
+        // fs.readFile(uri.fsPath, (error, buffer) => {
+        //     console.log(error, buffer);
+        // });
+
+
+        // Cretae new file/dir if not existed already
+        // fs.exists(uri.fsPath, exists => console.log());
+
+        // Remove directoy
+        // rimraf(path, error => handleResult(resolve, reject, error, void 0));
+
+        // Crete new directory
+        // mkdirp(path, error => handleResult(resolve, reject, error, void 0));
+
+        // Remove file
+        // fs.unlink(path, error => handleResult(resolve, reject, error, void 0));
+
+        // Write new file
+        // fs.writeFile(path, content, error => handleResult(resolve, reject, error, void 0));
 
         vscode.window.showInformationMessage('Command received');
         // console.log(posix.extname(uri.path));
