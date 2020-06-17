@@ -1,15 +1,28 @@
 import * as vscode from 'vscode';
+import * as fs from 'fs';
+// import { FileExplorer } from './fileExplorer';
 
 export function activate(context: vscode.ExtensionContext) {
-    const fileToFolder = vscode.commands.registerCommand('oops/fileToFolder', () => {
-        vscode.window.showInformationMessage('Convert file to folder');
-    });
+    const dispose = vscode.commands.registerCommand('oops.swap', async (uri: vscode.Uri) => {
+        // console.log(uri);
+        // fs.stat(uri.fsPath, (error, state) => {
+        //     console.log(state.isSymbolicLink);
+        // });
 
-    const folderToFile = vscode.commands.registerCommand('oops/folderToFile', () => {
-        vscode.window.showInformationMessage('Convert folder to file');
-    });
+        fs.exists(uri.fsPath, exists => console.log(exists));
 
-    context.subscriptions.push(fileToFolder);
+        vscode.window.showInformationMessage('Command received');
+        // console.log(posix.extname(uri.path));
+    });
+    context.subscriptions.push(dispose);
+}
+
+export function stat(path: string): Promise<fs.Stats> {
+    return new Promise<fs.Stats>((resolve, reject) => {
+        fs.stat(path, (error, stat) => (resolve, reject, error, stat) => {
+            console.log(resolve, reject, error, stat);
+        });
+    });
 }
 
 export function deactivate() { }

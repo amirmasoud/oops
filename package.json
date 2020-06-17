@@ -10,21 +10,24 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:oops/fileToFolder",
-    "onCommand:oops/folderToFile"
+    "onCommand:oops.swap"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "oops/fileToFolder",
-        "title": "Convert file to folder"
-      },
-      {
-        "command": "oops/folderToFile",
-        "title": "Convert folder to file"
+        "command": "oops.swap",
+        "title": "File ↔ Folder"
       }
-    ]
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "oops.swap",
+          "group": "5_cutcopypaste@999"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "yarn run compile",
@@ -35,16 +38,23 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.46.0",
     "@types/glob": "^7.1.1",
+    "@types/mkdirp": "^1.0.1",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.11.0",
-    "eslint": "^6.8.0",
-    "@typescript-eslint/parser": "^2.30.0",
+    "@types/rimraf": "^3.0.0",
+    "@types/vscode": "^1.46.0",
     "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "@typescript-eslint/parser": "^2.30.0",
+    "eslint": "^6.8.0",
     "glob": "^7.1.6",
     "mocha": "^7.1.2",
+    "tslint": "^6.1.2",
     "typescript": "^3.8.3",
     "vscode-test": "^1.3.0"
+  },
+  "dependencies": {
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2"
   }
 }
