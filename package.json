@@ -10,14 +10,19 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:oops.helloWorld"
+    "onCommand:oops/fileToFolder",
+    "onCommand:oops/folderToFile"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "oops.helloWorld",
-        "title": "Hello World"
+        "command": "oops/fileToFolder",
+        "title": "Convert file to folder"
+      },
+      {
+        "command": "oops/folderToFile",
+        "title": "Convert folder to file"
       }
     ]
   },
