@@ -1,11 +1,13 @@
 import * as vscode from 'vscode';
 import * as fs from 'fs';
+import * as mkdirp from 'mkdirp';
+import * as rimraf from 'rimraf';
+
 // import { FileExplorer } from './fileExplorer';
 
 export function activate(context: vscode.ExtensionContext) {
     const dispose = vscode.commands.registerCommand('oops.swap', async (uri: vscode.Uri) => {
-        console.log(uri);
-        fs.readdir(uri.fsPath, (error, children) => {
+        fs.readdir(uri.fsPath, async (error, children) => {
             if (error) {
                 fs.readFile(uri.fsPath, (error, buffer) => {
                     if (!error && buffer.length) {
@@ -14,7 +16,15 @@ export function activate(context: vscode.ExtensionContext) {
                     }
 
                     if (!error && !buffer.length) {
-                        fs.unlink(uri.fsPath, error => vscode.window.showErrorMessage(error));
+                        const path = uri.fsPath;
+                        fs.unlink(path, error => {
+                            if (error) {
+                                vscode.window.showErrorMessage('Error deleting file.');
+                            }
+                        });
+
+                        mkdirp(path);
+                        vscode.commands.executeCommand('workbench.files.action.refreshFilesExplorer');
                     }
                 });
             } else {
@@ -22,7 +32,27 @@ export function activate(context: vscode.ExtensionContext) {
                     vscode.window.showErrorMessage('Directory is not empty.');
                     return;
                 }
-                vscode.window.showInformationMessage('directory');
+                const path = uri.fsPath;
+                await rimraf(path, error => {
+                    if (error) {
+                        vscode.window.showErrorMessage('Error deleting directory.');
+                    }
+                });
+
+                console.log(path);
+
+                // vscode.commands.executeCommand('workbench.files.action.refreshFilesExplorer');
+
+
+                // await fs.writeFile('/Users/amirmasoud/Sites/test', '', error => {
+                //     if (error) {
+                //         vscode.window.showErrorMessage('Error creating file.');
+                //         console.error(error);
+                //     }
+                // });
+
+
+                vscode.commands.executeCommand('workbench.files.action.refreshFilesExplorer');
             }
         });
         // console.log(uri);
