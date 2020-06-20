@@ -4,6 +4,27 @@ import * as fs from 'fs';
 
 export function activate(context: vscode.ExtensionContext) {
     const dispose = vscode.commands.registerCommand('oops.swap', async (uri: vscode.Uri) => {
+        console.log(uri);
+        fs.readdir(uri.fsPath, (error, children) => {
+            if (error) {
+                fs.readFile(uri.fsPath, (error, buffer) => {
+                    if (!error && buffer.length) {
+                        vscode.window.showErrorMessage('File is not empty.');
+                        return;
+                    }
+
+                    if (!error && !buffer.length) {
+                        fs.unlink(uri.fsPath, error => vscode.window.showErrorMessage(error));
+                    }
+                });
+            } else {
+                if (children.length) {
+                    vscode.window.showErrorMessage('Directory is not empty.');
+                    return;
+                }
+                vscode.window.showInformationMessage('directory');
+            }
+        });
         // console.log(uri);
         // fs.stat(uri.fsPath, (error, state) => {
         //     console.log(state.isSymbolicLink);
@@ -38,7 +59,7 @@ export function activate(context: vscode.ExtensionContext) {
         // Write new file
         // fs.writeFile(path, content, error => handleResult(resolve, reject, error, void 0));
 
-        vscode.window.showInformationMessage('Command received');
+        // vscode.window.showInformationMessage('Command received');
         // console.log(posix.extname(uri.path));
     });
     context.subscriptions.push(dispose);
