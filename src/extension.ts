@@ -25,9 +25,16 @@ export function activate(context: vscode.ExtensionContext) {
             if (children.length) {
                 vscode.window.showErrorMessage('Directory is not empty.');
             } else {
+                const newUri = vscode.Uri.file(uri.fsPath);
                 await provider.delete(uri, { recursive: true });
                 vscode.commands.executeCommand('workbench.files.action.refreshFilesExplorer');
-                await provider.writeFile(uri, Uint8Array[0], { create: true, overwrite: false });
+                try {
+                    const content = new Uint8Array(0);
+                    const result = await provider.writeFile(newUri, content, { create: true, overwrite: true });
+                    console.log(result);
+                } catch (error) {
+                    console.error(error);
+                }
                 vscode.commands.executeCommand('workbench.files.action.refreshFilesExplorer');
             }
         }
