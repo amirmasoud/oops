@@ -3,6 +3,7 @@
   "displayName": "oops",
   "description": "Convert file to folder",
   "version": "1.0.0",
+  "publisher": "amirmasoud",
   "engines": {
     "vscode": "^1.46.0"
   },
