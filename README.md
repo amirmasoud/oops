@@ -1,3 +1,5 @@
+![.github/workflows/ci.yml](https://github.com/amirmasoud/oops/workflows/.github/workflows/ci.yml/badge.svg)
+
 # oops README
 
 This is the README for your extension "oops". After writing up a brief description, we recommend including the following sections.
