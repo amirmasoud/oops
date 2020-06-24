@@ -2,7 +2,7 @@
   "name": "oops",
   "displayName": "oops",
   "description": "Convert file to folder",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.46.0"
   },
