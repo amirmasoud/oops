@@ -216,19 +216,6 @@ export class FileSystemProvider implements vscode.TreeDataProvider<Entry>, vscod
     }
 
     async _writeFile(uri: vscode.Uri, content: Uint8Array, options: { create: boolean; overwrite: boolean; }): Promise<void> {
-        // const exists = await _.exists(uri.fsPath);
-        // if (!exists) {
-        //     if (!options.create) {
-        //         throw vscode.FileSystemError.FileNotFound();
-        //     }
-
-        //     await _.mkdir(path.dirname(uri.fsPath));
-        // } else {
-        //     if (!options.overwrite) {
-        //         throw vscode.FileSystemError.FileExists();
-        //     }
-        // }
-
         return _.writefile(uri.fsPath, content as Buffer);
     }
 

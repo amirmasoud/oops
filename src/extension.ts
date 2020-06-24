@@ -28,13 +28,8 @@ export function activate(context: vscode.ExtensionContext) {
                 const newUri = vscode.Uri.file(uri.fsPath);
                 await provider.delete(uri, { recursive: true });
                 vscode.commands.executeCommand('workbench.files.action.refreshFilesExplorer');
-                try {
-                    const content = new Uint8Array(0);
-                    const result = await provider.writeFile(newUri, content, { create: true, overwrite: true });
-                    console.log(result);
-                } catch (error) {
-                    console.error(error);
-                }
+                const content = new Uint8Array(0);
+                await provider.writeFile(newUri, content, { create: true, overwrite: true });
                 vscode.commands.executeCommand('workbench.files.action.refreshFilesExplorer');
             }
         }
