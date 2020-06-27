@@ -22,4 +22,21 @@ suite('Extension Test Suite', () => {
 		await Oops.folderToFile(uri);
 		assert.ok(fs.lstatSync(uri.fsPath).isFile());
 	});
+
+	test('Should not be able to delete not empty directory', async () => {
+		const uri = vscode.Uri.file(
+			path.join(__dirname + testFolderLocation + 'not_empty_directory')
+		);
+		await Oops.folderToFile(uri);
+		assert.ok(fs.lstatSync(uri.fsPath).isDirectory());
+		assert.ok(fs.lstatSync(uri.fsPath + '/directory_with_children').isFile());
+	});
+
+	test('Should not be able to delete not empty file', async () => {
+		const uri = vscode.Uri.file(
+			path.join(__dirname + testFolderLocation + 'not_empty_file')
+		);
+		await Oops.folderToFile(uri);
+		assert.ok(fs.lstatSync(uri.fsPath).isFile());
+	});
 });
