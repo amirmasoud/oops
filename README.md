@@ -12,7 +12,7 @@ In case of accidental creation of file instead of a folder, right-click on the f
 
 Same with the accidental folder, right-click and swap it with a file.
 
-![Convert folder to file](screenshots/oop_file.gif?raw=true "Convert folder to file")
+![Convert folder to file](screenshots/oop_file.gife.gif?raw=true "Convert folder to file")
 
 ✨ Won't convert a directory with children to a file!
 
