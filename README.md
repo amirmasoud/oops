@@ -8,11 +8,11 @@ Oops is a Visual Studio Code extension that converts the file to folder or conve
 
 In case of accidental creation of file instead of a folder, right-click on the folder and convert it to a folder.
 
-\!\[Convert file to folder\]\(screenshots/oops_folder.gif\)
+![Convert file to folder](screenshots/oops_folder.gif?raw=true "Convert file to folder")
 
 Same with the accidental folder, right-click and swap it with a file.
 
-\!\[Convert folder to file\]\(screenshots/oops_file.gif\)
+![Convert folder to file](screenshots/oops_file.gif?raw=true "Convert folder to file")
 
 ✨ Won't convert a directory with children to a file!
 

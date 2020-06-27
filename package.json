@@ -4,6 +4,20 @@
   "description": "Convert file to folder",
   "version": "1.0.0",
   "publisher": "amirmasoud",
+  "homepage": "https://github.com/amirmasoud/oops",
+  "author": {
+    "name": "Amirmasoud Sheydaei",
+    "email": "amirmasoud.sheydaei@gmail.com",
+    "url": "https://amirmasoud.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amirmasoud/oops"
+  },
+  "bugs": {
+    "url": "https://github.com/amirmasoud/oops/issues",
+    "email": "amirmasoud.sheydaei@gmail.com"
+  },
   "engines": {
     "vscode": "^1.46.0"
   },
