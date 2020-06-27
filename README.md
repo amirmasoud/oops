@@ -1,67 +1,35 @@
 ![.github/workflows/ci.yml](https://github.com/amirmasoud/oops/workflows/.github/workflows/ci.yml/badge.svg)
 
-# oops README
+# Oops
 
-This is the README for your extension "oops". After writing up a brief description, we recommend including the following sections.
+Oops is a Visual Studio Code extension that converts the file to folder or converts folder to file when they created accidentally.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+In case of accidental creation of file instead of a folder, right-click on the folder and convert it to a folder.
 
-For example if there is an image subfolder under your extension project workspace:
+\!\[Convert file to folder\]\(screenshots/oops_folder.gif\)
 
-\!\[feature X\]\(images/feature-x.png\)
+Same with the accidental folder, right-click and swap it with a file.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+\!\[Convert folder to file\]\(screenshots/oops_file.gif\)
 
-## Requirements
+✨ Won't convert a directory with children to a file!
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+✨ Won't convert a not empty file to a directory!
 
-## Extension Settings
+## Report Issues
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+If you found any issue or have any ideas to enhance the project please do not hesitate to open an issue.
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+[Create New Issue (GitHub)](https://github.com/amirmasoud/oops/issues/new)
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
+Initial release of Oops 🎉
 
-### 1.0.1
+### Support
 
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+If you found this repository useful please consider starring the [Oops](https://github.com/amirmasoud/oops).
