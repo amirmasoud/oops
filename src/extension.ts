@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import * as fs from 'fs';
 import { FileSystemProvider, FileStat } from './fileExplorer';
+import { resolve } from 'path';
 
 export function activate(context: vscode.ExtensionContext) {
     const dispose = vscode.commands.registerCommand('oops.swap', async (uri: vscode.Uri) => {
@@ -10,7 +11,7 @@ export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(dispose);
 }
 
-export async function fileToFolder(uri: vscode.Uri) {
+export async function fileToFolder(uri: vscode.Uri): Promise<String> {
     const fileState = new FileStat(fs.lstatSync(uri.fsPath));
     const provider = new FileSystemProvider();
     if (fileState.isFile) {
@@ -24,9 +25,10 @@ export async function fileToFolder(uri: vscode.Uri) {
             vscode.commands.executeCommand('workbench.files.action.refreshFilesExplorer');
         }
     }
+    return;
 }
 
-export async function folderToFile(uri: vscode.Uri) {
+export async function folderToFile(uri: vscode.Uri): Promise<String> {
     const fileState = new FileStat(fs.lstatSync(uri.fsPath));
     const provider = new FileSystemProvider();
     if (fileState.isDirectory) {
@@ -42,6 +44,7 @@ export async function folderToFile(uri: vscode.Uri) {
             vscode.commands.executeCommand('workbench.files.action.refreshFilesExplorer');
         }
     }
+    return;
 }
 
 export function deactivate() { }
