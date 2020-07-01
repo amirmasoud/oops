@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "publisher": "amirmasoud",
   "homepage": "https://github.com/amirmasoud/oops",
+  "icon": "src/images/icon.png",
   "author": {
     "name": "Amirmasoud Sheydaei",
     "email": "amirmasoud.sheydaei@gmail.com",
