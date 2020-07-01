@@ -4,8 +4,25 @@
   "description": "Convert file to folder",
   "version": "1.0.0",
   "publisher": "amirmasoud",
+  "license": "MIT",
   "homepage": "https://github.com/amirmasoud/oops",
+  "qna": "https://github.com/amirmasoud/oops/issues",
   "icon": "src/images/icon.png",
+  "keywords": [
+    "convert file to folder",
+    "file to folder",
+    "folder to file",
+    "directory to file",
+    "file to directory"
+  ],
+  "badges": [
+    {
+      "url": "https://github.com/amirmasoud/oops/workflows/.github/workflows/ci.yml/badge.svg"
+    }
+  ],
+  "categories": [
+    "other"
+  ],
   "author": {
     "name": "Amirmasoud Sheydaei",
     "email": "amirmasoud.sheydaei@gmail.com",
