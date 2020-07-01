@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.1.2] - 2020-07-01
+### Changed
+- Change galleryBanner theme to light
+
 ## [1.1.1] - 2020-07-01
 ### Fixed
 - Fix icon path

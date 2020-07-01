@@ -2,7 +2,7 @@
   "name": "oops",
   "displayName": "oops",
   "description": "Convert file to folder",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "publisher": "amirmasoud",
   "license": "MIT",
   "homepage": "https://github.com/amirmasoud/oops",
@@ -10,7 +10,7 @@
   "icon": "images/icon.png",
   "galleryBanner": {
     "color": "#FFF958",
-    "theme": "dark"
+    "theme": "light"
   },
   "keywords": [
     "convert file to folder",
