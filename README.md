@@ -24,11 +24,9 @@ If you found any issue or have any ideas to enhance the project please do not he
 
 [Create New Issue (GitHub)](https://github.com/amirmasoud/oops/issues/new)
 
-## Release Notes
+## Changelog
 
-### 1.0.0
-
-Initial release of Oops 🎉
+[Changelog](https://github.com/amirmasoud/oops/blob/master/CHANGELOG.md)
 
 ### Support
 

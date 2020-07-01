@@ -5,6 +5,11 @@ All notable changes to the "oops" extension will be documented in this file.
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
 ## [Unreleased]
+---
+
+## [1.1.3] - 2020-07-01
+### Changed
+- changed release note to changelog in readme
 
 ## [1.1.2] - 2020-07-01
 ### Changed
