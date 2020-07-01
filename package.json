@@ -7,7 +7,11 @@
   "license": "MIT",
   "homepage": "https://github.com/amirmasoud/oops",
   "qna": "https://github.com/amirmasoud/oops/issues",
-  "icon": "src/images/icon.png",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#FFF958",
+    "theme": "dark"
+  },
   "keywords": [
     "convert file to folder",
     "file to folder",

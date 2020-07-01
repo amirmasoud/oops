@@ -6,6 +6,19 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.1.1] - 2020-07-01
+### Fixed
+- Fix icon path
+
+### Removed
+- Removed quick start file
+
+### Added
+- galleryBanner added to package.json
+
+### Changed
+- Change src/images/icon.png to images/icon.png
+
 ## [1.1.0] - 2020-07-01
 ### Added
 - Add icon, categories, keywords and, badges to package.json
