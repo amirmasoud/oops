@@ -6,4 +6,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.1.0] - 2020-07-01
+### Added
+- Add icon, categories, keywords and, badges to package.json
+
+## [1.0.0] - 2020-06-27
 - Initial release

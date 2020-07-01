@@ -2,7 +2,7 @@
   "name": "oops",
   "displayName": "oops",
   "description": "Convert file to folder",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "amirmasoud",
   "license": "MIT",
   "homepage": "https://github.com/amirmasoud/oops",
@@ -17,11 +17,10 @@
   ],
   "badges": [
     {
-      "url": "https://github.com/amirmasoud/oops/workflows/.github/workflows/ci.yml/badge.svg"
+      "url": "https://github.com/amirmasoud/oops/workflows/.github/workflows/ci.yml/badge.svg",
+      "description": "Tests",
+      "href": "https://github.com/amirmasoud/oops"
     }
-  ],
-  "categories": [
-    "other"
   ],
   "author": {
     "name": "Amirmasoud Sheydaei",
