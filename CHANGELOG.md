@@ -7,6 +7,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [Unreleased]
 ---
 
+## [1.1.4] - 2020-07-01
+### Changed
+- changed galleryBanner color to #FFF66E
+
 ## [1.1.3] - 2020-07-01
 ### Changed
 - changed release note to changelog in readme
