@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"editor.formatOnSave": true,
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4,
+		"editor.detectIndentation": true
+	},
+}
