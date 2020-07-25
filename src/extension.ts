@@ -52,8 +52,6 @@ export async function fileToFolder(uri: vscode.Uri): Promise<void> {
 
 	// Basic check: `content.length`
 	if (isEmpty) {
-		vscode.window.showErrorMessage("File is not empty.");
-	} else {
 		// Remove given file URI and refresh files explorer
 		await provider.delete(uri, { recursive: false });
 		vscode.commands.executeCommand(
@@ -65,6 +63,8 @@ export async function fileToFolder(uri: vscode.Uri): Promise<void> {
 		vscode.commands.executeCommand(
 			"workbench.files.action.refreshFilesExplorer"
 		);
+	} else {
+		vscode.window.showErrorMessage("File is not empty.");
 	}
 }
 
