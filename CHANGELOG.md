@@ -8,7 +8,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ---
 
-## [1.1.5] - 2020-XX-XX
+## [1.1.5] - 2020-09-03
 
 ### Changed
 
