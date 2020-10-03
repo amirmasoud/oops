@@ -23,11 +23,3 @@ Same with the accidental folder, right-click and swap it with a file.
 If you found any issue or have any ideas to enhance the project please do not hesitate to open an issue.
 
 [Create New Issue (GitHub)](https://github.com/amirmasoud/oops/issues/new)
-
-## Changelog
-
-[Changelog](https://github.com/amirmasoud/oops/blob/master/CHANGELOG.md)
-
-### Support
-
-If you found this repository useful please consider starring the [Oops](https://github.com/amirmasoud/oops).
