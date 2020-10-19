@@ -4,6 +4,8 @@
 
 Oops is a Visual Studio Code extension that converts the file to folder or converts folder to file when they created accidentally.
 
+I also have published a blog post on how you can build a VSCode extension like this yourself. check it out [here](http://amirmasoud.me/2020/10/16/create-vscode-extension-from-scratch-to-testing-documentation-and-publishing/) if you are interesetd. 
+
 ## Features
 
 In case of accidental creation of file instead of a folder, right-click on the folder and convert it to a folder.
