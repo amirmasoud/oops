@@ -8,11 +8,11 @@ I also have published a blog post on how you can build a VSCode extension like t
 
 ## Features
 
-In case of accidental creation of file instead of a folder, right-click on the folder and convert it to a folder.
+In case of accidental creation of file instead of a folder, right-click on the folder and convert it to a file.
 
 ![Convert file to folder](screenshots/oops_folder.gif?raw=true "Convert file to folder")
 
-Same with the accidental folder, right-click and swap it with a file.
+Same with the accidental file, right-click and swap it with a folder.
 
 ![Convert folder to file](screenshots/oops_file.gif?raw=true "Convert folder to file")
 
